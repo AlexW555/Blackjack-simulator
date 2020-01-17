@@ -9,6 +9,11 @@ import java.util.*;
             Scanner scan = new Scanner(System.in);
             amount = scan.nextInt();
             System.out.println("You will start with £" + amount);
+            Deck deck = new Deck();
+
+            System.out.print(deck);
+
+
 
         }
     }

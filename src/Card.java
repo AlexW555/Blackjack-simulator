@@ -1,7 +1,6 @@
 public class Card {
     private ranks rank;
     private suits suit;
-    private int value;
 
     enum suits {
         Clubs,
@@ -10,7 +9,7 @@ public class Card {
         Diamonds
     }
 
-    enum ranks {
+   public enum ranks {
         Ace(1),
         Two(2),
         Three(3),
@@ -25,8 +24,11 @@ public class Card {
         Queen(10),
         Kin0(10);
 
-        ranks(int i) {
-        }
+        public final int value;
+
+        ranks(final int value){
+           this.value = value;
+       }
     }
 
     Card(suits suit, ranks rank){
@@ -34,22 +36,10 @@ public class Card {
         this.suit = suit;
     }
 
-    /*
-    This function returns the value of a card. If Facecard it returns 10.
-    TODO: Implement Aces = 10 or 1 (Currently: Ace = 11)
-     */
-   // public int getValue() {
- //      if (rank > 10) {
-//            value = 10;
-//        }
-//        else if (rank == 1){
-//            value = 11;
-//        }
-//        else {
-//            value = rank;
-//        }
-//        return value;
-   // }
+    public int getValue()
+    {
+        return rank.value;
+    }
 
 
 

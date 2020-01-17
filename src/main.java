@@ -20,6 +20,8 @@ import java.util.*;
             System.out.println("\n");
             Hand hand = new Hand(deck.drawCard(), deck.drawCard());
             System.out.print(hand);
+            deck.getValue(deck.drawCard(), deck.drawCard());
+
 
 
 

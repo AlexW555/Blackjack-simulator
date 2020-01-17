@@ -11,7 +11,18 @@ import java.util.*;
             System.out.println("You will start with £" + amount);
             Deck deck = new Deck();
 
+           // System.out.print(deck);
+            deck.shuffle();
             System.out.print(deck);
+           // System.out.println("\n");
+           // System.out.print(deck.drawCard());
+            //System.out.print(deck.drawCard());
+            System.out.println("\n");
+            Hand hand = new Hand(deck.drawCard(), deck.drawCard());
+            System.out.print(hand);
+
+
+
 
 
 

@@ -1,2 +1,2 @@
 # Blackjack simulator
- A Simple Blackjack game written in Java
+ A Simple Blackjack simulator game written in Java

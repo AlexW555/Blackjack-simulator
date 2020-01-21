@@ -18,9 +18,11 @@ import java.util.*;
            // System.out.print(deck.drawCard());
             //System.out.print(deck.drawCard());
             System.out.println("\n");
-            Hand hand = new Hand(deck.drawCard(), deck.drawCard());
+            Card card1 = deck.drawCard();
+            Card card2 = deck.drawCard();
+            Hand hand = new Hand(card1, card2);
             System.out.print(hand);
-            deck.getValue(deck.drawCard(), deck.drawCard());
+            deck.getValue(card1, card2);
 
 
 

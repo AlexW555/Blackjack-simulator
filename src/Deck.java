@@ -37,6 +37,7 @@ TODO: Implement Aces = 10 or 1 (Currently: Ace = 11)
  */
     public void getValue(Card card1, Card card2) {
         System.out.print(card1.getValue());
+        System.out.print(card2.getValue());
 
 //          if (rank > 10) {
 //            value = 10;

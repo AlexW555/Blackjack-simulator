@@ -11,11 +11,6 @@ public class Hand {
         this.card2 = card2;
     }
 
-//    public int calHandValue() {
-//        card1
-//
-//    }
-
     @Override
     public String toString() {
         return card1 + " and "+ card2;

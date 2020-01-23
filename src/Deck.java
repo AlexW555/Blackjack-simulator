@@ -35,9 +35,9 @@ public class Deck {
 This function returns the value of a card. If Facecard it returns 10.
 TODO: Implement Aces = 10 or 1 (Currently: Ace = 11)
  */
-    public void getValue(Card card1, Card card2) {
-        System.out.print(card1.getValue());
-        System.out.print(card2.getValue());
+    public int getValue(Card card1) {
+        return card1.getValue();
+
 
 //          if (rank > 10) {
 //            value = 10;

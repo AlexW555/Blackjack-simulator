@@ -33,7 +33,7 @@ import java.util.*;
 
             if (player1.decision()) {
                 while (player1.play(deck.drawCard())) {
-                    if (!player1.decision()){
+                    if (!player1.decision()) {
                         break;
                     }
                 }
@@ -51,29 +51,31 @@ import java.util.*;
 //            Thread.sleep(1000);
 //            dealerHandTotal();
 
+            dealerHandTotal = dealer1.dealerGetHandTotal();
 
-            while (dealer1.dealerGetHandTotal() <= 16) {
-                dealer1.play(deck.drawCard());
-
-            }
-            while (dealer1.play() <= 16) {
-                Card card5 = deck.drawCard();
-                System.out.println("Dealer picks up another card....");
-                Thread.sleep(1000);
-
-                System.out.println("Dealer draws the card " + card5);
-                dealerHandTotal += deck.getValue(card5);
-                dealerHandTotal();
+            while (dealerHandTotal <= 16) {
+                dealerHandTotal = dealer1.play(deck.drawCard());
 
             }
-            if (dealerHandTotal > 21) {
-                System.out.println("Dealer busted with a score of " + dealerHandTotal);
+//            while (dealer1.play() <= 16) {
+//                Card card5 = deck.drawCard();
+//                System.out.println("Dealer picks up another card....");
+//                Thread.sleep(1000);
+//
+//                System.out.println("Dealer draws the card " + card5);
+//                dealerHandTotal += deck.getValue(card5);
+//                dealerHandTotal();
+//
+//            }
+//            if (dealerHandTotal > 21) {
+//                System.out.println("Dealer busted with a score of " + dealerHandTotal);
+//            }
+//        }
+
+
+        }
+            public static void dealerHandTotal() {
+                System.out.println("Dealers total is " + dealerHandTotal);
             }
         }
-
-
-        public static void dealerHandTotal() {
-            System.out.println("Dealers total is " + dealerHandTotal);
-        }
-    }
 

@@ -1,3 +1,6 @@
+/**
+ * This is the class for a card. Each card has a rank and a suit
+ */
 public class Card {
     private ranks rank;
     private suits suit;
@@ -9,6 +12,9 @@ public class Card {
         Diamonds
     }
 
+    /*
+    Each suit has a value relative to its value in blackjack
+     */
    public enum ranks {
         Ace(1),
         Two(2),
@@ -31,18 +37,28 @@ public class Card {
        }
     }
 
+    /**
+     * Initializer for a card
+     * @param suit
+     * @param rank
+     */
     Card(suits suit, ranks rank){
         this.rank = rank;
         this.suit = suit;
     }
 
-    public int getValue()
-    {
+    /**
+     * Gets the value of the card
+     * @return Value of given card
+     */
+    public int getValue() {
         return rank.value;
     }
 
-
-
+    /**
+     * Overrides the toString method to combine rank with suit
+     * @return
+     */
     @Override
     public String toString() {
         return rank + " of "+ suit;

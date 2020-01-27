@@ -40,42 +40,10 @@ import java.util.*;
             }
 
 
-//            System.out.println("*******************************");
-//            System.out.println("Dealers turn");
-//            System.out.println("**Dealer will hit up to 16**");
-//            dealerHandTotal += deck.getValue(dealerHand.card1);
-//            dealerHandTotal += deck.getValue(dealerHand.card2);
-//            System.out.println("Dealer has....");
-//            Thread.sleep(1000);
-//            System.out.println("Dealer draws the " + dealerHand);
-//            Thread.sleep(1000);
-//            dealerHandTotal();
-
             dealerHandTotal = dealer1.dealerGetHandTotal();
-
             while (dealerHandTotal <= 16) {
                 dealerHandTotal = dealer1.play(deck.drawCard());
-
-            }
-//            while (dealer1.play() <= 16) {
-//                Card card5 = deck.drawCard();
-//                System.out.println("Dealer picks up another card....");
-//                Thread.sleep(1000);
-//
-//                System.out.println("Dealer draws the card " + card5);
-//                dealerHandTotal += deck.getValue(card5);
-//                dealerHandTotal();
-//
-//            }
-//            if (dealerHandTotal > 21) {
-//                System.out.println("Dealer busted with a score of " + dealerHandTotal);
-//            }
-//        }
-
-
-        }
-            public static void dealerHandTotal() {
-                System.out.println("Dealers total is " + dealerHandTotal);
             }
         }
+    }
 

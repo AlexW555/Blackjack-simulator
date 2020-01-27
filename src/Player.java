@@ -8,6 +8,9 @@ public class Player {
         playerHand = ph;
     }
 
+    /**
+     * The player hand total is used once when the player first picks up two cards and looks at their hand
+     */
     public void playerGetHandTotal() {
         playerHandValue += playerHand.card1.getValue();
         playerHandValue += playerHand.card2.getValue();
@@ -15,11 +18,19 @@ public class Player {
         System.out.println("Your total is " + playerHandValue);
     }
 
+    /**
+     * Taking in a card this is used to print out the total the player has in their hand.
+     * @param card
+     */
     public void playerHandTotal(Card card) {
         System.out.println("Your total is " + playerHandValue);
 
     }
 
+    /**
+     * A decision choice of if the player wishes to play on.
+     * @return True = Yes they want to play on, False = No stop playing.
+     */
     public boolean decision() {
         int decision;
 
@@ -37,6 +48,11 @@ public class Player {
         }
     }
 
+    /**
+     * If they player wishes to play on they will draw a card
+     * @param card
+     * @return The return type assosicates with if the player has busted or not.
+     */
     public boolean play(Card card) {
 
             System.out.println("You draw the card " + card);

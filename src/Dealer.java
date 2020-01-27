@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Dealer {
-
     private Hand dealerHand;
     public int dealerHandValue = 0;
 

@@ -22,7 +22,7 @@ public class Card {
         Ten(10),
         Jack(10),
         Queen(10),
-        Kin0(10);
+        King(10);
 
         public final int value;
 

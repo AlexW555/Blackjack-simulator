@@ -1,13 +1,7 @@
-import java.awt.*;
-
-import java.nio.file.attribute.UserPrincipalLookupService;
 import java.util.Scanner;
-import java.util.*;
-
 
     public class main {
 
-        public static int playerHandTotal;
         public static int dealerHandTotal;
 
         public static void main(String[] args) throws InterruptedException {
@@ -22,27 +16,35 @@ import java.util.*;
             System.out.print(deck);
             System.out.println("\n");
 
+            while (true) {
 
-            Hand playerHand = new Hand(deck.drawCard(), deck.drawCard());
-            Hand dealerHand = new Hand(deck.drawCard(), deck.drawCard());
 
-            Player player1 = new Player(playerHand);
-            Dealer dealer1 = new Dealer(dealerHand);
+                Hand playerHand = new Hand(deck.drawCard(), deck.drawCard());
+                Hand dealerHand = new Hand(deck.drawCard(), deck.drawCard());
 
-            player1.playerGetHandTotal();
+                Player player1 = new Player(playerHand);
+                Dealer dealer1 = new Dealer(dealerHand);
 
-            if (player1.decision()) {
-                while (player1.play(deck.drawCard())) {
-                    if (!player1.decision()) {
-                        break;
+                player1.playerGetHandTotal();
+
+                if (player1.decision()) {
+                    while (player1.play(deck.drawCard())) {
+                        if (!player1.decision()) {
+                            break;
+                        }
                     }
                 }
-            }
 
+            /*
+            Dealers turn
+             */
+                dealerHandTotal = dealer1.dealerGetHandTotal();
+                while (dealerHandTotal <= 16) {
+                    dealerHandTotal = dealer1.play(deck.drawCard());
+                }
 
-            dealerHandTotal = dealer1.dealerGetHandTotal();
-            while (dealerHandTotal <= 16) {
-                dealerHandTotal = dealer1.play(deck.drawCard());
+                
+                System.out.println("***************");
             }
         }
     }

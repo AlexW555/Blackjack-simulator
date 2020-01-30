@@ -1,8 +1,7 @@
-import java.util.Scanner;
-
 public class Dealer {
     private Hand dealerHand;
     public int dealerHandValue = 0;
+    private int dealerWins =0;
 
     public Dealer(Hand dh){
         dealerHand = dh;
@@ -24,7 +23,8 @@ public class Dealer {
     }
 
     public void dealerHandTotal(Card card) {
-        System.out.println("Your total is " + dealerHandValue);
+        System.out.println("Dealers total is " + dealerHandValue);
+
 
     }
 

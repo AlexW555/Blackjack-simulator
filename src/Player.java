@@ -14,7 +14,7 @@ public class Player {
     public void playerGetHandTotal() {
         playerHandValue += playerHand.card1.getValue();
         playerHandValue += playerHand.card2.getValue();
-        System.out.println("You draw the" + playerHand);
+        System.out.println("You draw the " + playerHand);
         System.out.println("Your total is " + playerHandValue);
     }
 

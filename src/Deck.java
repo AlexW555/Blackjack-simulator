@@ -2,7 +2,6 @@ import java.util.*;
 
 public class Deck {
     private ArrayList<Card> deck;
-    private static final Map<Integer, Card> BY_LABEL = new HashMap<>();
 
     /**
      * Initialises the deck ArrayList with the cards

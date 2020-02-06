@@ -19,6 +19,7 @@ public class Dealer {
         Thread.sleep(1000);
         System.out.println("Dealer draws the " + dealerHand);
         System.out.println("Dealers total is " + dealerHandValue);
+        Thread.sleep(1000);
         return dealerHandValue;
     }
 
@@ -38,12 +39,15 @@ public class Dealer {
 
         if (dealerHandValue > 21) {
             System.out.println("Dealer busted with a score of " + dealerHandValue);
+            Thread.sleep(1000);
             return dealerHandValue;
         } else if (dealerHandValue == 21) {
             System.out.println("Dealer hit up to 21, Ooof!");
+            Thread.sleep(500);
             return dealerHandValue;
         } else {
             dealerHandTotal(card);
+            Thread.sleep(500);
             return dealerHandValue;
         }
     }
